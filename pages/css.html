@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Full Stack Web Developer Notes</title>
+        <link rel="stylesheet" href="./../resources/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Full Stack Web Developer Notes</h1>
+            <nav>
+                <ul>
+                    <a href="./../index.html"><li>Home</li></a>
+                    <a href="./html.html"><li>HTML</li></a>
+                    <li class="nav-current-page">CSS</li>
+                    <a href="#"><li>JavaScript</li></a>
+                    <a href="#"><li>React</li></a>
+                    <a href="#"><li>SQL</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>CSS stands for <em>Cascading Style Sheets</em>. The HTML elements get their style from CSS. This can be color, fonts, positioning and layout.</p>
+            <p>A webpage with plain HTML will be structured, but might still be difficult to read. CSS will make a webpage look good and ideally better to read.</p>
+
+            <section class="main-section">
+                <h2>The Basics</h2>
+                <section class="main-section-item">
+                    <h3>Syntax And How to add CSS</h3>
+                    <p>CSS can be added to an HTML document in different ways, the external stylesheet is, howwever, the preferred way!</p>
+                    <h4>Inline</h4>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;h1 style=&quot;color: green;&quot;&gt;This is a green heading. Awesome!&lt;/h1&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <h4>Internal</h4>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;head&gt;
+                                &nbsp;&nbsp;&lt;style&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;h1 {
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: green;
+                                &nbsp;&nbsp;&nbsp;&nbsp;}
+                                &nbsp;&nbsp;&lt;style&gt;
+                                &lt;head&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <h4>External</h4>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;head&gt;
+                                &nbsp;&nbsp;&lt;link href=&quot;styles.css&quot; rel=&quot;stylesheet&quot;&gt;
+                                &lt;head&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-css">css | styles.css</figcaption>
+                        <pre>
+                            <code>
+                                h1 {
+                                    &nbsp;&nbsp;color: green;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                </figure>
+                </section>
+            </section>
+            <section class="main-section">
+                <h2>Selectors</h2>
+                <section class="main-section-item">
+                    <h3>Universal Selector</h3>
+                    <ul>
+                        <li>Targets all elements</li>
+                    </ul>
+                    <figure>
+                        <figcaption class="source-code-example-css">css</figcaption>
+                        <pre>
+                            <code>
+                                * {
+                                &nbsp;&nbsp;font-family: Verdana;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>Type Selector</h3>
+                    <ul>
+                        <li>Matches the type of the HTML element</li>
+                        <li>This is also referred to as the <em>tag name selector</em> or the <em>element selector</em></li>
+                    </ul>
+                    <figure>
+                        <figcaption class="source-code-example-css">css</figcaption>
+                        <pre>
+                            <code>
+                                p {
+                                &nbsp;&nbsp;color: blue;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>Class Selector</h3>
+                    <ul>
+                        <li>Targets all elements with that class name</li>
+                        <li>HTML elements can have multiple class values</li>
+                    </ul>
+                    <figure>
+                        <figcaption class="source-code-example-css">css</figcaption>
+                        <pre>
+                            <code>
+                                .make-green {
+                                &nbsp;&nbsp;color: green;
+                                }
+
+                                .make-fat {
+                                &nbsp;&nbsp;font-weight: bold;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                            &lt;p class=&quot;make-green make-fat&quot;&gt;This text is green and bold.&lt;/p&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-result">result</figcaption>
+                        <div class="example-result">
+                            <div class="make-green make-fat">This text is green and bold.</div>
+                        </div>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>ID Selector</h3>
+                    <ul>
+                        <li>The element ID must be unique on a given HTML document</li>
+                        <li>Therefore, an ID targets only one specific element</li>
+                        <li>Also, unlike to the class value, HTML elements can only have a single ID value</li>
+                    </ul>
+                    <figure>
+                        <figcaption class="source-code-example-css">css</figcaption>
+                        <pre>
+                            <code>
+                                #large-title {
+                                &nbsp;&nbsp;color: red;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>Attribute Selector</h3>
+                    <ul>
+                        <li>Targets a specific type of elements that have a specific attribute</li>
+                        <li>Can be used in an even more specific way by targeting only specific attribut values</li>
+                    </ul>
+                    <figure>
+                        <figcaption class="source-code-example-css">css</figcaption>
+                        <pre>
+                            <code>
+                                <span class="source-code-example-comment">/* All &lt;p&gt; elements with the 'lang' attribute set */</span>
+                                p[lang] {
+                                &nbsp;&nbsp;color: magenta;
+                                }
+
+                                <span class="source-code-example-comment">/* All &lt;p&gt; elements where the 'lang' attribute contains the value 'en-US' */</span>
+                                p[lang*='en-US'] {
+                                &nbsp;&nbsp;color: green;
+                                }
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                            &lt;p lang=&quot;en-GB&quot;&gt;Oi! How's it going?&lt;/p&gt;
+                            &lt;p lang=&quot;en-US&quot;&gt;Awsome, just awsome!&lt;/p&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-result">result</figcaption>
+                        <div class="example-result">
+                            <div lang="en-GB">Oi! How's it going?</div>
+                            <div lang="en-US">Awsome, just awsome!</div>
+                        </div>
+                    </figure>
+                </section>
+
+            </section>
+        </main>
+        <footer>&copy; 2023 by Christoph Neumann</footer>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Full Stack Web Developer Notes</title>
+        <link rel="stylesheet" href="./../resources/css/styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>Full Stack Web Developer Notes</h1>
+            <nav>
+                <ul>
+                    <a href="./../index.html"><li>Home</li></a>
+                    <li class="nav-current-page">HTML</li>
+                    <a href="./css.html"><li>CSS</li></a>
+                    <a href="#"><li>JavaScript</li></a>
+                    <a href="#"><li>React</li></a>
+                    <a href="#"><li>SQL</li></a>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>HTML stands for <em>Hypertext Markup Language</em>. It contains the text contents and references to other contents (e.g. images) of a web page and it also contains the code that tells the Browser how to display the web page.</p>
+            <p>A web page gets it's structre through HTML, which can also be seen as the sceleton of a web page.</p>
+            <p>The <em>Hypertext</em> part of HTML means that HTML documents can be linked and it is possible to navigate between HTML documents using these links. An HTML document is therefore not just a single, separate document, but can be part of a much bigger structure.</p>
+            <p>The <em>Markup</em> part of HTML is a reference to the code that is used to tell the browser how the contents of the HTML page should be displayed. This code - the HTML tags - enclose the actual contents and tell the browser to display text in e.g. bold.</p>
+
+            <section class="main-section">
+                <h2>The Basics</h2>
+                <section class="main-section-item">
+                    <h3>Semantic HTML</h3>
+                    <p>Semantic HTML elements should be prefered over non-semantic elements whenever possible. Why, you might ask?</p>
+                    <ul>
+                        <li>It makes webpages more accessible (e.g. for screenreaders)</li>
+                        <li>The webpage's SEO (Search Engine Optimazation) is improved</li>
+                        <li>Reading the source code is much easier</li>
+                    </ul>
+                    <p>Here are some examples of semantic HTML tags:</p>
+                    <ul>
+                        <li>&lt;header&gt;</li>
+                        <li>&lt;nav&gt;</li>
+                        <li>&lt;main&gt;</li>
+                        <li>&lt;footer&gt;</li>
+                        <li>&lt;article&gt;</li>
+                        <li>&lt;section&gt;</li>
+                        <li>&lt;aside&gt;</li>
+                        <li>&lt;figure&gt;</li>
+                        <li>&lt;figcaption&gt;</li>
+                        <li>&lt;audio&gt;</li>
+                        <li>&lt;video&gt;</li>
+                    </ul>
+                </section>
+                <section class="main-section-item">
+                    <h3>Structured HTML ??? tbd.</h3>
+                    <p>Structured HTML elements... </p>
+                    <ul>
+                        <li>Only to be used when sementaic not available...??? tbd.</li>
+                    </ul>
+                    <p>Here are some examples of structured HTML tags:</p>
+                    <ul>
+                        <li>&lt;div&gt;</li>
+                    </ul>
+                </section>
+                <section class="main-section-item">
+                    <h3>A Basic HTML File</h3>
+                    <p>The basic structure of a HTML file looks as follows:</p>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;!DOCTYPE html&gt;
+                                &lt;html&gt;
+                                &nbsp;&nbsp;&lt;head&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;The title is displayed in the tab title&lt;/title&gt;
+                                &nbsp;&nbsp;&lt;/head&gt;
+                                &nbsp;&nbsp;&lt;body&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;The main heading of the webpage&lt;/h1&gt;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;A paragraph describing the webpage...&lt;/p&gt;
+                                &nbsp;&nbsp;&lt;/body&gt;
+                                &lt;/html&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>Doctype</h3>
+                    <p>At the very first line of an HTML document, the <em>DOCTYPE</em> declaration tells the browser that the document is an HTML document.</p>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;!DOCTYPE html&gt;
+                            </code>                        
+                        </pre>
+                    </figure>
+                </section>
+                <section class="main-section-item">
+                    <h3>Comments</h3>
+                    <p>To increase the readability of the HTML document, it can be very useful to add comments. This might also be helpful when testing code.</p>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;!-- This is an html comment --!&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+            </section>
+            <section class="main-section">
+                <h2>HTML Elements</h2>
+                <section class="main-section-item">
+                    <h3>&lt;a&gt;</h3> <!-- <a> -->
+                    <p>The anchor element is used to link to sections on the same page or to other HTML documents.</p>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;a href="#mylink"&gt;Linking to a section on the same page...&lt;/a&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                                &lt;br /&gt;
+                                &lt;div id="mylink"&gt;
+                                &nbsp;&nbsp;&lt;p&gt;Some text&lt;/p&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                    <figure>
+                        <figcaption class="source-code-example-html">html</figcaption>
+                        <pre>
+                            <code>
+                                &lt;a href="https://developer.mozilla.org"&gt;MDN Web Documentation&lt;/a&gt;
+                            </code>
+                        </pre>
+                    </figure>
+                </section>
+            </section>
+        </main>
+        <footer>&copy; 2023 by Christoph Neumann</footer>
+    </body>
+</html>
